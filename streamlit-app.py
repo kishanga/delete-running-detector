@@ -79,15 +79,15 @@ def main():
     tfflie = tempfile.NamedTemporaryFile(delete=False)
 
     if use_webcam:
-            # vid = cv2.VideoCapture(0)
-            webrtc_streamer(key="example")
+            vid = cv2.VideoCapture(0)
+            # webrtc_streamer(key="example")
         #else:
          #   vid = cv2.VideoCapture(DEMO_VIDEO)
          #   tfflie.name = DEMO_VIDEO
     
-    else:
-        tfflie.write(video_file_buffer.read())
-        vid = cv2.VideoCapture(tfflie.name)
+    #else:
+    #    tfflie.write(video_file_buffer.read())
+    #    vid = cv2.VideoCapture(tfflie.name)
 
     #values 
     width = int(vid.get(cv2.CAP_PROP_FRAME_WIDTH))
