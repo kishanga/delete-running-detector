@@ -281,8 +281,8 @@ def main():
         out.release()
         cv2.destroyAllWindows()
 
-    st.success('Video is Processed')
-    st.stop()
+    #st.success('Video is Processed')
+    #st.stop()
 
 if __name__ == '__main__':
     main()
