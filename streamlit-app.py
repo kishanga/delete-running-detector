@@ -78,8 +78,7 @@ def main():
     #temporary file name 
     tfflie = tempfile.NamedTemporaryFile(delete=False)
 
-    if use_webcam:
-            vid = cv2.VideoCapture(0)
+    vid = cv2.VideoCapture(0)
             # webrtc_streamer(key="example")
         #else:
          #   vid = cv2.VideoCapture(DEMO_VIDEO)
