@@ -78,14 +78,12 @@ def main():
     #temporary file name 
     tfflie = tempfile.NamedTemporaryFile(delete=False)
 
-    if not video_file_buffer:
-
-        if use_webcam:
+    if use_webcam:
             # vid = cv2.VideoCapture(0)
             webrtc_streamer(key="example")
-        else:
-            vid = cv2.VideoCapture(DEMO_VIDEO)
-            tfflie.name = DEMO_VIDEO
+        #else:
+         #   vid = cv2.VideoCapture(DEMO_VIDEO)
+         #   tfflie.name = DEMO_VIDEO
     
     else:
         tfflie.write(video_file_buffer.read())
@@ -289,6 +287,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# py -m streamlit run d:/capstone-running-form/streamlit-app.py
