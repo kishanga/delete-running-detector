@@ -21,7 +21,7 @@ import sklearn.metrics
 from streamlit_webrtc import webrtc_streamer
 warnings.filterwarnings("ignore")
 
-
+from camera_input_live import camera_input_live
 
 
 # default demo video 
