@@ -9,4 +9,4 @@ scikit-learn==1.3.2
 streamlit-webrtc
 aiortc
 av
-camera_input_live
+streamlit-camera-input-live
