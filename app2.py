@@ -33,9 +33,6 @@ model_path = 'finalized_model.sav'
 class VideoProcessor:
 	def recv(self, frame):
 		frm = frame.to_ndarray(format="bgr24")
-		
-
-	
 		mp_drawing = mp.solutions.drawing_utils
 	    	mp_holistic = mp.solutions.holistic
 	    	mp_pose = mp.solutions.pose
