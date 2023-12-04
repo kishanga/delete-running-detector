@@ -15,4 +15,4 @@ class VideoProcessor:
 
 
 
-webrtc_streamer(key="edge", video_processor_factory=VideoProcessor())
+webrtc_streamer(key="edge", video_processor_factory=VideoProcessor)
