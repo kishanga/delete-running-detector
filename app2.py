@@ -198,13 +198,13 @@ class VideoProcessor:
 					    sd.play(beep, samplerate=44100)
 					    sd.wait()
 			    else:
-				print_ans = "Good Posture"
+				    print_ans = "Good Posture"
 	
 			    
 			    if int(font_size/10)<7:
-				ss=font_size+27
+				    ss=font_size+27
 			    else:
-				ss=int(font_size/10)+42+font_size
+				    ss=int(font_size/10)+42+font_size
 			 
 			    font = ImageFont.truetype("Arial-Unicode.ttf", ss)
 			    # font = ImageFont.truetype("Arial Unicode.ttf", ss)
@@ -214,7 +214,7 @@ class VideoProcessor:
 			    
 			    image = cv2.cvtColor(np.array(pil_im), cv2.COLOR_RGB2BGR)
 			except:
-			    pass
+				pass
 	
 			#stframe.image(image,use_column_width=True)
 	
