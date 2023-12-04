@@ -1,8 +1,11 @@
+from ultralytics import YOLO
+
 global model
 global conf
 
-model = something
-conf = something_else
+# load pretrained model 
+model = "yolov8m-pose.pt"
+conf = 0.5
 
 def _display_detected_frames( image, is_display_tracking=None, tracker=None):
     global conf
