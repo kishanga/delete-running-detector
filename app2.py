@@ -150,8 +150,8 @@ class VideoProcessor:
 			    row.insert(0, class_name)
 			    
 			    with open('Prediction_info.csv', mode='a', newline='') as f:
-				csv_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-				csv_writer.writerow(row)
+				    csv_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+				    csv_writer.writerow(row)
 	
 			    df = pd.read_csv('Prediction_info.csv')
 			    nose = [df.at[0,'x1'],df.at[0,'y1']]
