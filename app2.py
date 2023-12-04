@@ -51,7 +51,7 @@ class VideoProcessor:
 	        	clf = pickle.load(f)
 	        	count = 0
 	  
-	    	with mp_holistic.Holistic(min_detection_confidence=0.5) as holistic:
+		with mp_holistic.Holistic(min_detection_confidence=0.5) as holistic:
 	
 
 			#recoloring it back to BGR b/c it will rerender back to opencv
