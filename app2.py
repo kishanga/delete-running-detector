@@ -184,19 +184,19 @@ class VideoProcessor:
 			    print_ans="0"
 			    
 			    if answer==0:
-				print_ans="Bad Posture"
-				count = count+1
-	
-				# Beep sound
-				if count >= 1 and count <= 5:
-				    duration = 0.5  # seconds
-				    frequency = 1000  # Hz
-				    t = np.linspace(0, duration, int(44100 * duration), endpoint=False)
-				    beep = 0.5 * np.sin(2 * np.pi * frequency * t)
+				    print_ans="Bad Posture"
+				    count = count+1
 				    
-				    # Play the beep sound
-				    sd.play(beep, samplerate=44100)
-				    sd.wait()
+				    # Beep sound
+				    if count >= 1 and count <= 5:
+					    duration = 0.5  # seconds
+					    frequency = 1000  # Hz
+					    t = np.linspace(0, duration, int(44100 * duration), endpoint=False)
+					    beep = 0.5 * np.sin(2 * np.pi * frequency * t)
+					    
+					    # Play the beep sound
+					    sd.play(beep, samplerate=44100)
+					    sd.wait()
 			    else:
 				print_ans = "Good Posture"
 	
