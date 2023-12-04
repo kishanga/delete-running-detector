@@ -47,7 +47,7 @@ class VideoProcessor:
 	    	#model_full_path = os.path.join(os.getcwd(), model_path)
 	    	#print(model_full_path)
 	
-	    	with open(model_path, 'rb') as f:
+		with open(model_path, 'rb') as f:
 	        	clf = pickle.load(f)
 	        	count = 0
 	  
