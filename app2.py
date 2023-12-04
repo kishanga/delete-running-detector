@@ -44,7 +44,7 @@ with open(model_path, 'rb') as f:
 
 class VideoProcessor:
 	def recv(self, frame):
-		frm = frame.to_ndarray(format="bgr24")
+		image = frame.to_ndarray(format="bgr24")
 		class_name='Good'
 
 		count=0
@@ -54,7 +54,7 @@ class VideoProcessor:
 	
 
 			#recoloring it back to BGR b/c it will rerender back to opencv
-			image = cv2.cvtColor(frm, cv2.COLOR_BGR2RGB)
+			#image = cv2.cvtColor(frm, cv2.COLOR_BGR2RGB)
 			image.flags.writeable = False
 	
 			results = holistic.process(image)
@@ -211,7 +211,7 @@ class VideoProcessor:
 			    draw.rectangle(bbox, fill = 'black')
 			    draw.text((20,temp), print_ans, font = font, fill = 'white')
 			    
-			    image = cv2.cvtColor(np.array(pil_im), cv2.COLOR_RGB2BGR)
+			    #image = cv2.cvtColor(np.array(pil_im), cv2.COLOR_RGB2BGR)
 			except:
 				pass
 	
