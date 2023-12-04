@@ -95,9 +95,9 @@ class VideoProcessor:
 	
 			    # Calculate angle.
 			    def findAngle(x1, y1, x2, y2):
-				theta = m.acos((y2 -y1)*(-y1) / (m.sqrt((x2 - x1)**2 + (y2 - y1)**2) * y1))
-				degree = int(180/m.pi)*theta
-				return degree
+				    theta = m.acos((y2 -y1)*(-y1) / (m.sqrt((x2 - x1)**2 + (y2 - y1)**2) * y1))
+				    degree = int(180/m.pi)*theta
+				    return degree
 			
 			    
 			    # setting image writeable back to true to be able process it
