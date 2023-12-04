@@ -1,6 +1,26 @@
 from streamlit_webrtc import webrtc_streamer, RTCConfiguration
 import av
 import cv2
+import mediapipe as mp
+
+import tempfile
+import streamlit as st
+import numpy as np
+import csv
+import os
+import math as m
+from PIL import ImageFont, ImageDraw, Image
+
+from sklearn.linear_model import LogisticRegression
+from sklearn import datasets
+import pickle
+import sounddevice as sd
+import pandas as pd
+import warnings
+import time
+
+import sklearn.metrics
+warnings.filterwarnings("ignore")
 
 cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
