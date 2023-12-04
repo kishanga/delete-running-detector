@@ -26,30 +26,29 @@ warnings.filterwarnings("ignore")
 # mediapipe inbuilt solutions 
 mp_face_detection = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
+drawing_spec = mp_drawing.DrawingSpec(thickness=1, circle_radius=1)
+mp_holistic = mp.solutions.holistic
+mp_pose = mp.solutions.pose
+pose = mp_pose.Pose()
 
-cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+
+#cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 model_path = 'finalized_model.sav'
+
+#model_full_path = os.path.join(os.getcwd(), model_path)
+#print(model_full_path)
+
+with open(model_path, 'rb') as f:
+	clf = pickle.load(f)
+
 
 class VideoProcessor:
 	def recv(self, frame):
 		frm = frame.to_ndarray(format="bgr24")
-		mp_drawing = mp.solutions.drawing_utils
-		mp_holistic = mp.solutions.holistic
-		mp_pose = mp.solutions.pose
-		pose = mp_pose.Pose()
 		class_name='Good'
-	
-		drawing_spec = mp_drawing.DrawingSpec(thickness=1, circle_radius=1)
 
 		count=0
 	
-
-	    	#model_full_path = os.path.join(os.getcwd(), model_path)
-	    	#print(model_full_path)
-	
-		with open(model_path, 'rb') as f:
-	        	clf = pickle.load(f)
-	        	count = 0
 	  
 		with mp_holistic.Holistic(min_detection_confidence=0.5) as holistic:
 	
