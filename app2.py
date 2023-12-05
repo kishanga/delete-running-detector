@@ -205,13 +205,14 @@ class VideoProcessor:
 			    else:
 				    ss=int(font_size/10)+42+font_size
 			 
-			    font = ImageFont.truetype("Arial-Unicode.ttf", ss)
+			    #font = ImageFont.truetype("Arial-Unicode.ttf", ss)
 			    # font = ImageFont.truetype("Arial Unicode.ttf", ss)
-			    bbox = draw.textbbox((20,temp), print_ans, font = font)
-			    draw.rectangle(bbox, fill = 'black')
-			    draw.text((20,temp), print_ans, font = font, fill = 'white')
+			    #bbox = draw.textbbox((20,temp), print_ans, font = font)
+			    #draw.rectangle(bbox, fill = 'black')
+			    #draw.text((20,temp), print_ans, font = font, fill = 'white')
 			    
 			    #image = cv2.cvtColor(np.array(pil_im), cv2.COLOR_RGB2BGR)
+			    st.write(print_ans)			    
 			except:
 				pass
 	
