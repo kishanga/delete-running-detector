@@ -212,7 +212,7 @@ class VideoProcessor:
 			    #draw.text((20,temp), print_ans, font = font, fill = 'white')
 			    
 			    #image = cv2.cvtColor(np.array(pil_im), cv2.COLOR_RGB2BGR)
-			    st.write(print_ans)			    
+			    #st.write(print_ans)			    
 			except:
 				pass
 	
