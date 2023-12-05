@@ -69,9 +69,9 @@ class VideoProcessor:
 			lm = results.pose_landmarks
 			lmPose = mp_pose.PoseLandmark
 	
-			mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS,
-							mp_drawing.DrawingSpec(color=(245,117,66), thickness=2, circle_radius=4),
-							mp_drawing.DrawingSpec(color=(245,66,230), thickness=2, circle_radius=2))
+			# mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS,
+			#				mp_drawing.DrawingSpec(color=(245,117,66), thickness=2, circle_radius=4),
+			#				mp_drawing.DrawingSpec(color=(245,66,230), thickness=2, circle_radius=2))
 	
 			# Acquire the landmark coordinates.
 			# Once aligned properly, left or right should not be a concern.
@@ -125,9 +125,9 @@ class VideoProcessor:
 			    image = cv2.cvtColor(np.array(pil_im), cv2.COLOR_RGB2BGR)
 	
 			    # Draw the pose landmarks
-			    mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS,
-							mp_drawing.DrawingSpec(color=(245,117,66), thickness=2, circle_radius=4),
-							mp_drawing.DrawingSpec(color=(245,66,230), thickness=2, circle_radius=2))
+			    #mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS,
+							#mp_drawing.DrawingSpec(color=(245,117,66), thickness=2, circle_radius=4),
+							#mp_drawing.DrawingSpec(color=(245,66,230), thickness=2, circle_radius=2))
 			    
 			    len(results.pose_landmarks.landmark)
 			    num_coords = len(results.pose_landmarks.landmark)
